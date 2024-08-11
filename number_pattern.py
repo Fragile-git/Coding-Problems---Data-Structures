@@ -138,7 +138,7 @@ for line in range(start,end+1):
 1 2 3 4  = in range(1, 6 - 1) = range(1,5) = 4x 
   2 3 4  = in range(1, 6 - 2) = range(1,4) = 3x
     3 4  = in range(1, 6 - 3) = range(1,3) = 2x
-      1  = in range(1, 6 - 4) = range(1,2) = 1x
+      4  = in range(1, 6 - 4) = range(1,2) = 1x
 """
 
 
@@ -167,7 +167,7 @@ for line in range(start,end+1):
 
 print()
 
-print("5th pattern: ")
+print("5th pattern (Diamond): ")
 
 for line in range(start, end+1):
     right = line
@@ -237,22 +237,49 @@ for line in range(start,end_6):
             print(elements, end=' ')
     print()
 
+print()
+
+print('7th Pattern: ')
+for i in range(end):
+    print(' ' * (end - i - 1) + '*' * (2 * i + 1))
+
+#   *
+#  ***
+# *****    
+
+print()
+
+
+print('8th Pattern: ')
+for i in range(end,0,-1):
+    print(' ' * (end - i ) + '*' * (2 * i - 1 ))
+
+# *****   
+#  *** 
+#   *
+
 
 
 """
 An hourglass pattern is a geometric figure represented within a 2D grid. 
-The figure consists of a top triangle, a middle line, and a bottom triangle. 
+The figure consists of a: 
+    top triangle, 
+    a middle line, and a 
+    bottom triangle. 
+
 Write a program that receives a number and generates an hourglass
 pattern of height 2n+1. The hourglass is centered within the grid. Use the *
 character to represent the hourglass and spaces for the empty areas.
 """
-size = int(input('Enter size: '))
+size = int(input('Enter size for hourglass pattern: '))
 
+# Top of the hour glass 
 for i in range(size+1,0,-1): # decreasing 
-    spaces = ' ' * (size+1-i) # increasing number of sizes 
+    spaces = ' ' * (size+1-i) # increasing number of spaces 
     top = spaces + '*' * (2*i-1)
     print(top)
-    
+
+# Bottom of the hour glass
 for i in range(2,size+2):
     spaces = ' ' * (size+1-i)
     bot = spaces + '*' * (2*i-1)
@@ -260,10 +287,6 @@ for i in range(2,size+2):
 
 
     
-    
-
-
-
     
 
 
