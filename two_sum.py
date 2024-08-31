@@ -12,7 +12,7 @@ def find_sum(array,target):
     for i,value in enumerate(array): # iterate every element of the array
         if target-value in array[i+1:]: 
             # (target - value) is the value needed to add up the target sum
-            # while the first value is the value at index i
+            # Start comparing starting after the next index until the last index of the array
             return [i,array.index(target-value,i+1)] # return the index 
     return None
 
